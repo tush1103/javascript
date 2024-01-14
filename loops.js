@@ -126,9 +126,40 @@ const newnums2 = mynums.map(num => num + 1) //2,3,4,5
 // console.log(newnums2)
 
 //chaining
-const numbers = [1, 2, 3, 4,5,6,7,8]
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8]
 const nums = numbers
   .map(num => num * 10)
   .map(num => num + 1)
   .filter(num => num > 40)
-console.log(nums)
+// console.log(nums)
+
+//reduce method
+
+//works like accoumulator=accumulator+currentValue
+//on start, accoumulator has the initialValue
+const numb = [1, 2, 3]
+const total = numb.reduce((acc, currVal) => acc + currVal, 0)
+//here 0 is the initital value of accumulator
+console.log(total)
+
+const shoppingCart=[
+    {
+        itemName:"js course",
+        price:2999
+    },
+    {
+        itemName:"Python course",
+        price:999
+    },
+    {
+        itemName:"mobile dev course",
+        price:5999
+    },
+    {
+        itemName:"data science course",
+        price:12999
+    }
+]
+
+const totalSum=shoppingCart.reduce((totalPrice,item)=>totalPrice+item.price,0)
+console.log(totalSum);

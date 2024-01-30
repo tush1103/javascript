@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div">Div<button id="button">Button</button>
+    <a href="https://google.com" id="google">Google</a></div>
+    <script>
+        // document.getElementById('div').addEventListener('click',function(e){
+        //     console.log(e);
+        // },false)
+        //type,timestamp,defaultPrevented,target,toElement,srcElement,currentTarget,clientX,clientY,screenX,screenY,altkey,ctrlkey,shiftkey,keyCode
+
+        document.getElementById('div').addEventListener('click',function(e){
+            // console.log('inside div');
+        },false)
+        document.getElementById('button').addEventListener('click',function(e){
+            // console.log('inside button');
+        },false)
+        //output->
+        //inside button
+        //inside div
+
+        document.getElementById('div').addEventListener('click',function(e){
+            // console.log('inside div');
+        },true)
+        document.getElementById('button').addEventListener('click',function(e){
+            // console.log('inside button');
+        },true)
+        //output->
+        //inside div
+        //inside button
+
+
+
+        document.getElementById('div').addEventListener('click',function(e){
+            // console.log('inside div');
+        },false)
+        document.getElementById('button').addEventListener('click',function(e){
+            // console.log('inside button');
+        },true)
+        //output->
+        //inside button
+        //inside div
+
+
+        document.getElementById('div').addEventListener('click',function(e){
+            // console.log('inside div');
+        },true)
+        document.getElementById('button').addEventListener('click',function(e){
+            // console.log('inside button');
+        },false)
+        //output->
+        //inside div
+        //inside button
+
+
+        document.getElementById('div').addEventListener('click',function(e){
+            // console.log('inside div');
+            
+        },false)
+        document.getElementById('button').addEventListener('click',function(e){
+            // console.log('inside button');
+            // e.stopPropagation()
+            //ab ye event bubble hokr upr ke element pr nahi jaega
+        },false)
+        //output-> when we click on owl
+        //inside button
+
+
+
+
+        document.getElementById('div').addEventListener('click',function(e){
+            // e.stopPropagation()
+            // console.log('inside div');
+            //ab ye event bubble hokr niche ke element pr nahi jaega
+        },true)
+        document.getElementById('button').addEventListener('click',function(e){
+            // console.log('inside button');
+            //ab ye event bubble hokr upr ke element pr nahi jaega
+        },true)
+
+
+
+        //event propagation has two contexts:false-> event bubbling(child elem to parent elem) and true-> event capturing(parent elem to child elem)
+
+
+        //preventDefault
+        document.getElementById('google').addEventListener('click',function(e){
+            e.preventDefault();
+            console.log("google clicked");
+        },false)
+        //now even on clicking on the link,it wont take us to the google website
+    </script>
+</body>
+</html>

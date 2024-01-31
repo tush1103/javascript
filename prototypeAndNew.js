@@ -48,9 +48,9 @@ a new obj is created: the new keyword initiates the creation of a new js obect
 
 a prototype is linked: the newly created object gets linked to the prototype property of the constructor function. This means that is has access to properties and methods defined on the constructor's prototype.
 
-the constructor is called: the constructor function is called with the specified arguments and this is bound to the newly created obect. It no explicit return value is specified from the constructor, js assumed this, the newly created object to be the intended return value.
+the constructor is called: the constructor function is called with the specified arguments and this is bound to the newly created obect. If no explicit return value is specified from the constructor, js assumes this, the newly created object to be the intended return value.
 
-the new obj is retured: after the constructor function has been called, if it doesnt return a non primitive value(obj,array,function etv),the newly created object is return
+the new obj is retured: after the constructor function has been called, if it doesnt return a non primitive value(obj,array,function etc),the newly created object is return
 
 
 */
